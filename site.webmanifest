@@ -1,0 +1,12 @@
+{
+  "name": "The Gilded Oath",
+  "short_name": "Gilded Oath",
+  "description": "Official download page for The Gilded Oath.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07100d",
+  "theme_color": "#081611",
+  "icons": [
+    {"src": "assets/app-icon.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
