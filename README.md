@@ -6,10 +6,10 @@ Official website and Android release hub for **The Gilded Oath**, a touch-first 
 
 Download the current Android release from the repository's **Releases** page.
 
-- Version: `2.0.1`
+- Version: `2.0.3`
 - Package: `com.gildedoath.game`
 - Architecture: `arm64-v8a`
-- APK: `TheGildedOath_v2_0_1.apk`
+- APK: `TheGildedOath_v2_0_3.apk`
 - SHA-256: `300b8bbc4194ac44b28205dc79cf690cbf3f2d89d57634c03dced620f31e3062`
 
 ## Website
