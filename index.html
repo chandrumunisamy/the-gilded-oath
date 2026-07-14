@@ -3,189 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#08120f">
-  <meta name="description" content="Download The Gilded Oath, a dark strategy card game made for Android.">
-  <meta property="og:title" content="The Gilded Oath — Download for Android">
-  <meta property="og:description" content="Build clever hands, balance Light and Dark, and survive rules that change every round.">
+  <meta name="theme-color" content="#07100d">
+  <meta name="description" content="Enter The Gilded Oath, a dark card game where every round changes the rules.">
+  <meta property="og:title" content="The Gilded Oath — Break the House">
+  <meta property="og:description" content="Build your hand. Bend Light and Dark. Survive the Keepers.">
   <meta property="og:image" content="assets/social-card.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/menu-hero-480.webp" as="image" type="image/webp" media="(max-width: 700px)">
-  <link rel="preload" href="assets/menu-hero-900.webp" as="image" type="image/webp" media="(min-width: 701px)">
+  <link rel="preload" href="assets/menu-hero-480.webp" as="image" type="image/webp" media="(max-width: 720px)">
+  <link rel="preload" href="assets/menu-hero-900.webp" as="image" type="image/webp" media="(min-width: 721px)">
   <link rel="stylesheet" href="styles.css">
   <title>The Gilded Oath — Download for Android</title>
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="The Gilded Oath home">
-        <img src="assets/app-icon.png" width="40" height="40" alt="">
-        <span>The Gilded Oath</span>
+    <a class="brand" href="#top" aria-label="The Gilded Oath home">
+      <img src="assets/app-icon.png" alt="" width="38" height="38">
+      <span>The Gilded Oath</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#game">The Game</a>
+      <a href="#keepers">The Keepers</a>
+      <a class="header-download" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases">
+        Download
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#game">The game</a>
-        <a href="#pictures">Pictures</a>
-        <a href="#install">Install</a>
-        <a class="header-download" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases" aria-label="Download The Gilded Oath">
-          <span>Download</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
-        </a>
-      </nav>
-    </div>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="hero shell">
+    <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Available now on Android</p>
-        <h1>Every hand is<br><em>an oath.</em></h1>
-        <p class="hero-lede">A dark strategy card game about clever choices, Light and Dark, and rules that change beneath your cards.</p>
+        <p class="eyebrow">THE HOUSE IS OPEN</p>
+        <h1>
+          <span>Make your oath.</span>
+          <span class="gold">Break the House.</span>
+        </h1>
+        <p class="hero-lede">
+          A dark card game where every round rewrites the law. Turn cards between Light and Dark, build the hand you need, and face the Keepers before the House closes around you.
+        </p>
         <div class="hero-actions">
           <a class="button button-primary" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
-            <span>Download the game</span>
+            <span data-download-label>Download for Android</span>
           </a>
-          <a class="button button-secondary" href="https://github.com/chandrumunisamy/the-gilded-oath">Project page</a>
+          <a class="button button-secondary" href="#game">See how it plays</a>
         </div>
-        <div class="release-meta" aria-label="Game information">
-          <span>Works offline</span><i></i><span>No account</span><i></i><span>Made for phones</span>
-        </div>
+        <p class="hero-note">No account required <span></span> Plays without internet</p>
       </div>
 
-      <div class="hero-art" aria-label="The Gilded Oath artwork">
-        <div class="hero-frame" aria-hidden="true"></div>
-        <picture>
-          <source media="(max-width: 700px)" srcset="assets/menu-hero-480.webp">
-          <img class="hero-portrait" src="assets/menu-hero-900.webp" width="900" height="900" alt="Engraved card-table artwork from The Gilded Oath" fetchpriority="high" decoding="async">
-        </picture>
-        <div class="hero-seal" aria-hidden="true"><span>THE HOUSE</span><strong>AWAITS</strong></div>
-      </div>
-    </section>
-
-    <section class="highlights shell" aria-label="Game highlights">
-      <div><strong>40</strong><span>cards to learn</span></div>
-      <div><strong>30</strong><span>powers to find</span></div>
-      <div><strong>4</strong><span>keepers to face</span></div>
-      <div><strong>∞</strong><span>changing paths</span></div>
-    </section>
-
-    <section class="section shell story" id="game">
-      <p class="section-kicker">The table has laws</p>
-      <div class="story-grid">
-        <h2>Do not chase a number.<br>Build a way out.</h2>
-        <div class="story-copy">
-          <p>Choose one to five cards. Turn them between Light and Dark. You only get a few chances to flip or swap cards, so every choice matters.</p>
-          <p>Every journey brings new fights, strange events, useful shops, powerful rewards, and Keepers who change the rules.</p>
-        </div>
-      </div>
-      <img class="ornament" src="assets/ornament-divider.png" width="1020" height="112" alt="" loading="lazy" decoding="async">
-    </section>
-
-    <section class="section shell feature-grid" aria-label="What makes the game special">
-      <article>
-        <span>01</span>
-        <h3>Choose Light or Dark</h3>
-        <p>Keep a card safe in the Light, or turn it Dark for a greater reward with more risk.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>Every round changes</h3>
-        <p>New rules can help, punish, or completely change the kind of hand you should play.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>Shape each journey</h3>
-        <p>Find new powers, change your cards, choose your path, and build a different way to win each time.</p>
-      </article>
-    </section>
-
-    <section class="section gallery" id="pictures">
-      <div class="gallery-heading shell">
-        <div>
-          <p class="section-kicker">Inside the house</p>
-          <h2>Made for your hands,<br>not squeezed onto a phone.</h2>
-        </div>
-        <p>Large cards, clear buttons, readable rules, and a world built from walnut, felt, old paper, and brass.</p>
-      </div>
-
-      <div class="screens" aria-label="Game pictures">
-        <figure class="screen">
+      <div class="hero-visual" aria-label="The Gilded Oath key art">
+        <div class="hero-frame">
           <picture>
-            <source media="(max-width: 700px)" srcset="assets/screen-menu-480.webp">
-            <img src="assets/screen-menu-720.webp" width="720" height="1600" alt="The Gilded Oath main menu" loading="lazy" decoding="async">
+            <source media="(max-width: 720px)" srcset="assets/menu-hero-480.webp">
+            <img src="assets/menu-hero-900.webp" width="900" height="900" alt="Dark engraved artwork from The Gilded Oath" fetchpriority="high" decoding="async">
           </picture>
-          <figcaption>Enter the house</figcaption>
-        </figure>
-        <figure class="screen">
-          <picture>
-            <source media="(max-width: 700px)" srcset="assets/screen-gameplay-480.webp">
-            <img src="assets/screen-gameplay-720.webp" width="720" height="1600" alt="The Gilded Oath card table" loading="lazy" decoding="async">
-          </picture>
-          <figcaption>Read the table</figcaption>
-        </figure>
-        <figure class="screen">
-          <picture>
-            <source media="(max-width: 700px)" srcset="assets/screen-map-480.webp">
-            <img src="assets/screen-map-720.webp" width="720" height="1600" alt="The Gilded Oath journey map" loading="lazy" decoding="async">
-          </picture>
-          <figcaption>Choose the path</figcaption>
-        </figure>
+        </div>
+        <div class="oath-mark" aria-hidden="true">
+          <small>LIGHT</small>
+          <strong>OR</strong>
+          <small>DARK</small>
+        </div>
+        <p class="hero-quote">“The rules change.<br>Your choices remain.”</p>
       </div>
-      <p class="swipe-hint">Swipe to see more</p>
     </section>
 
-    <section class="section shell keepers">
-      <div class="keeper-copy">
-        <p class="section-kicker">The Keepers</p>
-        <h2>Every house has someone watching.</h2>
-        <p>Each Keeper changes the rules in a different way. A hand that saved you before may fail when the next one arrives.</p>
+    <section class="promise" aria-label="The Gilded Oath promise">
+      <p>One hand.</p>
+      <span></span>
+      <p>One law.</p>
+      <span></span>
+      <p>No safe choice.</p>
+    </section>
+
+    <section class="game-section" id="game">
+      <div class="section-heading">
+        <p class="eyebrow">HOUSE RULE 01</p>
+        <h2>
+          <span>The table</span>
+          <span class="gold">never plays fair.</span>
+        </h2>
+        <p>Every round gives you a new law to obey—or a new weakness to exploit. Read it. Shape your hand. Commit before your chances run out.</p>
       </div>
-      <figure class="keeper-card">
-        <picture>
-          <source media="(max-width: 700px)" srcset="assets/keeper-brass-widow-480.webp">
+
+      <div class="gameplay-feature">
+        <figure class="phone-shot phone-shot-main">
+          <img src="assets/screen-gameplay-720.webp" width="720" height="1600" alt="A hand being prepared in The Gilded Oath" loading="lazy" decoding="async">
+        </figure>
+        <div class="gameplay-steps">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Read the law</h3>
+              <p>The House tells you what it wants. The smartest move is rarely the obvious one.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Shape the hand</h3>
+              <p>Turn cards between Light and Dark. Spend your few chances to flip, swap, and recover.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Live with the oath</h3>
+              <p>Play the hand. Take the reward. Carry the consequence into the next room.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section">
+      <div class="section-heading compact">
+        <p class="eyebrow">EVERY RUN TELLS A STORY</p>
+        <h2>
+          <span>Enter.</span>
+          <span class="gold">Choose. Endure.</span>
+        </h2>
+      </div>
+
+      <div class="journey-grid">
+        <figure class="journey-card">
+          <div class="phone-shot">
+            <img src="assets/screen-menu-480.webp" width="480" height="1067" alt="The entrance to The Gilded Oath" loading="lazy" decoding="async">
+          </div>
+          <figcaption><span>01</span><strong>Enter the House</strong><p>Begin a new oath and step into a route that will not wait for you.</p></figcaption>
+        </figure>
+        <figure class="journey-card journey-card-raised">
+          <div class="phone-shot">
+            <img src="assets/screen-gameplay-480.webp" width="480" height="1067" alt="A card battle in The Gilded Oath" loading="lazy" decoding="async">
+          </div>
+          <figcaption><span>02</span><strong>Commit the Hand</strong><p>Build around the law, then decide how much risk the moment deserves.</p></figcaption>
+        </figure>
+        <figure class="journey-card">
+          <div class="phone-shot">
+            <img src="assets/screen-map-480.webp" width="480" height="1067" alt="A route through The Gilded Oath" loading="lazy" decoding="async">
+          </div>
+          <figcaption><span>03</span><strong>Choose the Path</strong><p>Chase power, seek safety, or walk straight toward the Keeper waiting ahead.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="keepers-section" id="keepers">
+      <div class="keepers-intro">
+        <p class="eyebrow">THE KEEPERS</p>
+        <h2>
+          <span>The House</span>
+          <span class="gold">has faces.</span>
+        </h2>
+        <p>Each Keeper changes what a good hand means. The pattern that saved you before may become the mistake that ends your oath.</p>
+      </div>
+
+      <div class="keeper-grid">
+        <article class="keeper-card">
           <img src="assets/keeper-brass-widow-768.webp" width="768" height="768" alt="The Brass Widow" loading="lazy" decoding="async">
-        </picture>
-        <figcaption><span>Keeper I</span><strong>The Brass Widow</strong></figcaption>
-      </figure>
-      <figure class="keeper-card">
-        <picture>
-          <source media="(max-width: 700px)" srcset="assets/keeper-drowned-archivist-480.webp">
+          <div class="keeper-copy">
+            <span>KEEPER I</span>
+            <h3>The Brass Widow</h3>
+            <p>She turns patience into pressure and makes every wasted move feel expensive.</p>
+          </div>
+        </article>
+        <article class="keeper-card">
           <img src="assets/keeper-drowned-archivist-768.webp" width="768" height="768" alt="The Drowned Archivist" loading="lazy" decoding="async">
-        </picture>
-        <figcaption><span>Keeper III</span><strong>The Drowned Archivist</strong></figcaption>
-      </figure>
-    </section>
-
-    <section class="section shell" id="install">
-      <div class="install-card">
-        <div class="install-copy">
-          <p class="section-kicker">Install on Android</p>
-          <h2>Take your seat.</h2>
-          <p>Download the game straight to your phone. You do not need an account or another app to play.</p>
-          <a class="button button-primary" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases"><span>Download the game</span></a>
-        </div>
-        <ol>
-          <li><span>1</span><div><strong>Tap Download</strong><p>Wait for the game file to finish downloading.</p></div></li>
-          <li><span>2</span><div><strong>Give permission</strong><p>Your phone may ask you to allow the installation. Follow the message shown on screen.</p></div></li>
-          <li><span>3</span><div><strong>Open and play</strong><p>Finish the installation, then open The Gilded Oath.</p></div></li>
-        </ol>
+          <div class="keeper-copy">
+            <span>KEEPER III</span>
+            <h3>The Drowned Archivist</h3>
+            <p>He remembers the hands you trusted—and teaches the House how to punish them.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section shell final-call">
-      <img src="assets/app-icon.png" width="96" height="96" alt="The Gilded Oath icon" loading="lazy" decoding="async">
-      <p class="section-kicker">The table is set</p>
-      <h2>Begin a new oath.</h2>
-      <a class="button button-primary" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases"><span>Download the game</span></a>
+    <section class="download-section" id="download">
+      <img src="assets/app-icon.png" width="112" height="112" alt="The Gilded Oath icon" loading="lazy" decoding="async">
+      <p class="eyebrow">YOUR SEAT IS WAITING</p>
+      <h2>
+        <span>Begin</span>
+        <span class="gold">a new oath.</span>
+      </h2>
+      <p class="download-copy">Download the game, open the file, and follow the installation message shown by your phone.</p>
+      <a class="button button-primary button-large" data-download-link href="https://github.com/chandrumunisamy/the-gilded-oath/releases">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+        <span data-download-label>Download for Android</span>
+      </a>
+      <p class="download-status" id="download-status" aria-live="polite">Finding the newest version…</p>
     </section>
   </main>
 
-  <footer class="shell">
-    <div class="footer-brand"><img src="assets/app-icon.png" width="34" height="34" alt=""><strong>The Gilded Oath</strong></div>
+  <footer>
+    <a class="brand footer-brand" href="#top">
+      <img src="assets/app-icon.png" alt="" width="34" height="34">
+      <span>The Gilded Oath</span>
+    </a>
     <p>Created by Chandru M.</p>
-    <div><a href="https://github.com/chandrumunisamy/the-gilded-oath">Project page</a><a href="#install">Install help</a></div>
   </footer>
 
   <script src="script.js" defer></script>

@@ -1,49 +1,50 @@
 const REPOSITORY = 'chandrumunisamy/the-gilded-oath';
 const RELEASES_PAGE = `https://github.com/${REPOSITORY}/releases`;
-const LATEST_RELEASE = `https://api.github.com/repos/${REPOSITORY}/releases/latest`;
-const CACHE_KEY = 'gilded-oath-download-v2';
-const links = [...document.querySelectorAll('[data-download-link]')];
+const LATEST_RELEASE_API = `https://api.github.com/repos/${REPOSITORY}/releases/latest`;
 
-function useDownload(url) {
-  if (!url) return;
+const links = [...document.querySelectorAll('[data-download-link]')];
+const labels = [...document.querySelectorAll('[data-download-label]')];
+const status = document.querySelector('#download-status');
+
+function setTarget(url) {
   links.forEach((link) => { link.href = url; });
 }
 
-function getCachedDownload() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(CACHE_KEY));
-    if (!saved?.url || Date.now() - saved.time > 6 * 60 * 60 * 1000) return null;
-    return saved.url;
-  } catch {
-    return null;
+function setFallback(message) {
+  setTarget(RELEASES_PAGE);
+  labels.forEach((label) => { label.textContent = 'View the download'; });
+  if (status) {
+    status.textContent = message;
+    status.className = 'download-status warning';
   }
 }
 
 async function findDownload() {
-  const cached = getCachedDownload();
-  if (cached) useDownload(cached);
-
   try {
-    const response = await fetch(LATEST_RELEASE, { headers: { Accept: 'application/vnd.github+json' } });
-    if (!response.ok) return;
+    const response = await fetch(LATEST_RELEASE_API, {
+      headers: { Accept: 'application/vnd.github+json' },
+    });
+    if (!response.ok) throw new Error('Release unavailable');
+
     const release = await response.json();
-    const apk = Array.isArray(release.assets)
-      ? release.assets.find((file) => file.name.toLowerCase().endsWith('.apk'))
+    const file = Array.isArray(release.assets)
+      ? release.assets.find((asset) => asset.name.toLowerCase().endsWith('.apk'))
       : null;
-    if (!apk?.browser_download_url) return;
-    useDownload(apk.browser_download_url);
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify({ url: apk.browser_download_url, time: Date.now() }));
-    } catch {
-      // The download link still works without saved browser data.
+
+    if (!file) {
+      setFallback('The newest download is being prepared.');
+      return;
+    }
+
+    setTarget(file.browser_download_url);
+    labels.forEach((label) => { label.textContent = 'Download for Android'; });
+    if (status) {
+      status.textContent = 'The newest version is ready.';
+      status.className = 'download-status ready';
     }
   } catch {
-    useDownload(cached || RELEASES_PAGE);
+    setFallback('Open the download page to get the newest version.');
   }
 }
 
-if ('requestIdleCallback' in window) {
-  requestIdleCallback(findDownload, { timeout: 1500 });
-} else {
-  window.setTimeout(findDownload, 350);
-}
+findDownload();

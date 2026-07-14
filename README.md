@@ -1,5 +1,5 @@
-# The Gilded Oath website
+# The Gilded Oath
 
-Official download website for The Gilded Oath.
+Official website for The Gilded Oath.
 
-The page is built as plain HTML, CSS, and JavaScript for GitHub Pages. It uses small WebP pictures, fixed image shapes, and no heavy scrolling effects so it remains smooth on phones.
+The page automatically connects its download buttons to the newest Android release published in this repository.
