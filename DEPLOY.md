@@ -1,14 +1,17 @@
-# Deployment checklist
+# Deploy update
 
-Repository expected by the site: `chandrumunisamy/the-gilded-oath`
+From this extracted folder, open PowerShell and run:
 
-1. Create a **public** GitHub repository named `the-gilded-oath` with no generated README or license.
-2. Add all files from this folder to the `main` branch.
-3. In **Settings → Pages**, choose **GitHub Actions** as the source.
-4. Create a GitHub Release with tag `v2.0.1`.
-5. Paste `release/RELEASE_NOTES_v2.0.1.md` into the release notes.
-6. Upload `TheGildedOath_v2_0_1.apk` as the release asset.
-7. Publish the release.
-8. The website download buttons already target that exact release asset URL.
+```powershell
+git init
+git branch -M main
+git remote remove origin 2>$null
+git remote add origin https://github.com/chandrumunisamy/the-gilded-oath.git
+git add .
+git commit -m "Fix mobile website and APK download"
+git push -u origin main --force-with-lease
+```
 
-The APK is 113,592,447 bytes, so it must be a **Release asset**. Do not commit it directly to the repository.
+Use `--force-with-lease` only because this package replaces the current generated website. It refuses to overwrite the remote when somebody else has pushed changes you do not have.
+
+Then create or update a published GitHub Release and upload the APK. No hard-coded version or APK filename is required by the website.

@@ -1,32 +1,28 @@
-# The Gilded Oath
+# The Gilded Oath website
 
-Official website and Android release hub for **The Gilded Oath**, a touch-first portrait card roguelite built with Godot.
+Official static website for **The Gilded Oath**.
 
-## Download
+## What this revision fixes
 
-Download the current Android release from the repository's **Releases** page.
+- Rebuilt the mobile layout for 320–980 px screens.
+- Corrected heading, card, gallery, keeper, install-panel, and footer alignment.
+- Added responsive screenshot snapping and position indicators.
+- Added lightweight entrance, header, hero, hover, and mobile download-dock motion.
+- Respects `prefers-reduced-motion`.
+- Removed the fragile hard-coded APK URL.
+- Download buttons now query the latest GitHub Release and automatically use its `.apk` asset.
+- When no APK release exists, buttons safely open the Releases page instead of a 404 URL.
 
-- Version: `2.0.3`
-- Package: `com.gildedoath.game`
-- Architecture: `arm64-v8a`
-- APK: `TheGildedOath_v2_0_3.apk`
-- SHA-256: `300b8bbc4194ac44b28205dc79cf690cbf3f2d89d57634c03dced620f31e3062`
+## Publish
 
-## Website
+Replace the repository files with this folder, then commit and push:
 
-The static site is deployed with GitHub Pages through `.github/workflows/deploy-pages.yml`.
+```powershell
+git add .
+git commit -m "Fix mobile layout and release downloads"
+git push
+```
 
-## Android installation
+## Required GitHub release
 
-1. Download the APK from Releases.
-2. Open it from your browser or file manager.
-3. Allow installs from that source when Android requests it.
-4. Install and launch the game.
-
-## Privacy
-
-The current Android export does not request the Internet permission. Game saves are stored locally on the device.
-
-## Credits
-
-Created by Chandru M. See the in-game Credits screen for the complete asset and licensing inventory.
+Create at least one published GitHub Release and attach an `.apk` file. The website will locate the latest APK automatically; the tag and filename can change between releases.
